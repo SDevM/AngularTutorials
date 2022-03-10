@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularTutorials';
+  textField: string = 'Moon';
+  handleEvent(e: Event){
+    (e.target as HTMLParagraphElement).innerHTML = "3/10/2022";
+  }
+  acceptText(e: Event){
+    this.textField = (e.target as HTMLInputElement).value;
+  }
 }
